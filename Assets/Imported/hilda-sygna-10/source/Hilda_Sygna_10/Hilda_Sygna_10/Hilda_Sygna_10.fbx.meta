@@ -3,7 +3,62 @@ guid: d97da6f835e9685439acd946b8933a03
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_body.001
+    second: {fileID: 2100000, guid: 299046f696e85d244a8874507d52cd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_body.002
+    second: {fileID: 2100000, guid: 299046f696e85d244a8874507d52cd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_body.003
+    second: {fileID: 2100000, guid: 299046f696e85d244a8874507d52cd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_body.004
+    second: {fileID: 2100000, guid: 299046f696e85d244a8874507d52cd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_body.005
+    second: {fileID: 2100000, guid: 299046f696e85d244a8874507d52cd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_face.001
+    second: {fileID: 2100000, guid: 8eb005ab4b8df2f48a6c29700a69d3f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_hair.001
+    second: {fileID: 2100000, guid: 299046f696e85d244a8874507d52cd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_mouth.001
+    second: {fileID: 2100000, guid: 299046f696e85d244a8874507d52cd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_mouth.002
+    second: {fileID: 2100000, guid: 299046f696e85d244a8874507d52cd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_skin.001
+    second: {fileID: 2100000, guid: 299046f696e85d244a8874507d52cd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ch0004_10_toko_skin.002
+    second: {fileID: 2100000, guid: 299046f696e85d244a8874507d52cd51, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
