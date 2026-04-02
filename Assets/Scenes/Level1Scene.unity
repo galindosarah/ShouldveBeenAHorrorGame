@@ -383,9 +383,125 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1105268123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.8556247
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.353364
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.9657414
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_Name
+      value: Peach's Castle Interior
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+--- !u!1001 &1626496947
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.4556584
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.271213
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.897877
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d97da6f835e9685439acd946b8933a03, type: 3}
+      propertyPath: m_Name
+      value: Hilda_Sygna_10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d97da6f835e9685439acd946b8933a03, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 961739753}
   - {fileID: 203844589}
+  - {fileID: 1105268123}
+  - {fileID: 1626496947}
