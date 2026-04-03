@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class QuitGame : MonoBehaviour
 {
-    void QuitGame()
-    {
-        Application.Quit();
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
     }
 }

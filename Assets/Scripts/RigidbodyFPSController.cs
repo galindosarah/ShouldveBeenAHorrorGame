@@ -148,7 +148,7 @@ namespace DigitalWorlds
                 jumpBufferCounter -= Time.deltaTime;
             }
 
-            if (!lockCamera)
+            if (!lockCamera && !PauseGame.isPaused)
             {
                 Look();
             }
