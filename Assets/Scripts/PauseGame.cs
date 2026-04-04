@@ -4,11 +4,13 @@ using UnityEngine.SceneManagement;
 public class PauseGame : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject instructionsMenu;
     public static bool isPaused = false;
 
     private void Start()
     {
         pauseMenu.SetActive(false);
+        instructionsMenu.SetActive(false);
         resumeCursorState();
     }
 
@@ -16,7 +18,11 @@ public class PauseGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {   
-            if (isPaused)
+            if (isPaused && instructionsMenu.activeSelf)
+            {
+                BackToPauseMenu();
+            }
+            else if (isPaused)
             {
                 Resume();
             }
@@ -62,5 +68,17 @@ public class PauseGame : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void ShowInstructions()
+    {
+        pauseMenu.SetActive(false);
+        instructionsMenu.SetActive(true);
+    }
+
+    public void BackToPauseMenu()
+    {
+        pauseMenu.SetActive(true);
+        instructionsMenu.SetActive(false);
     }
 }
