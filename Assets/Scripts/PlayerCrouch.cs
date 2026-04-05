@@ -17,6 +17,10 @@ public class PlayerCrouch : MonoBehaviour
     private Vector3 normalCamPos;
     public Vector3 crouchCamPos;
 
+    public GameObject playerModel;
+
+    private bool wasCrouching = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,6 +52,12 @@ public class PlayerCrouch : MonoBehaviour
         {
             Vector3 targetCamPos = isCrouching ? crouchCamPos : normalCamPos;
             cameraHolder.localPosition = Vector3.Lerp(cameraHolder.localPosition, targetCamPos, Time.deltaTime * smoothSpeed);
+        }
+
+        if (playerModel != null && isCrouching != wasCrouching)
+        {
+            playerModel.SetActive(!isCrouching);
+            wasCrouching = isCrouching;
         }
     }
 }

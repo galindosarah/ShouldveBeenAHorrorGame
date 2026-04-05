@@ -3982,6 +3982,7 @@ MonoBehaviour:
   smoothSpeed: 10
   cameraHolder: {fileID: 961739753}
   crouchCamPos: {x: 0, y: 0.8, z: 0}
+  playerModel: {fileID: 2015478073}
 --- !u!1 &935851904179008097
 GameObject:
   m_ObjectHideFlags: 0
