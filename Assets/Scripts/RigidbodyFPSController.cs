@@ -221,11 +221,12 @@ namespace DigitalWorlds
 
                 axis *= sprintSpeed;
 
-                Vector3 forward = new(-firstPersonCamera.transform.right.z, 0f, firstPersonCamera.transform.right.x);
+                Vector3 forward = transform.forward;
+                Vector3 right = transform.right;
 
                 // Preserve gravity-affected Y velocity
                 float currentYVelocity = rb.linearVelocity.y;
-                Vector3 horizontalVelocity = forward * axis.x + firstPersonCamera.transform.right * axis.y;
+                Vector3 horizontalVelocity = forward * axis.x + right * axis.y;
                 rb.linearVelocity = new Vector3(horizontalVelocity.x, currentYVelocity, horizontalVelocity.z);
             }
 
