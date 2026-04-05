@@ -3956,8 +3956,9 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652082124888}
   - component: {fileID: 1626496950}
-  - component: {fileID: 1626496949}
   - component: {fileID: 1626496952}
+  - component: {fileID: 1626496949}
+  - component: {fileID: 919132147560702691}
   m_Layer: 0
   m_Name: Hilda_Sygna_10
   m_TagString: Player
@@ -3965,6 +3966,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &919132147560702691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147560702690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f324b73e8bbd42c4fabc4b13250dbf1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCrouch
+  crouchHeight: 1
+  smoothSpeed: 10
+  cameraHolder: {fileID: 961739753}
+  crouchCamPos: {x: 0, y: 0.8, z: 0}
 --- !u!1 &935851904179008097
 GameObject:
   m_ObjectHideFlags: 0
