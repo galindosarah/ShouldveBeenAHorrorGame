@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3904992579232441675}
   - component: {fileID: 9053034900027202516}
   - component: {fileID: 8595200821675638724}
+  - component: {fileID: 3702348461408636997}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -83,6 +84,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.92140573
   m_Center: {x: 0.12396445, y: 0.7644049, z: 0.033532016}
+--- !u!114 &3702348461408636997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988683109982696180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7d9ec6a9e54d74294defec98dd83a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fireball
+  lifetime: 3
 --- !u!1 &5687154377052270004
 GameObject:
   m_ObjectHideFlags: 0
