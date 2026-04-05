@@ -1,6 +1,7 @@
 // DIG3878 Spring 2026
 // University of Florida's Digital Worlds Institute
 // Written by Logan Kemper
+// Edited by Annette Gonzalez
 
 using System;
 using UnityEngine;
@@ -295,10 +296,16 @@ namespace DigitalWorlds
 
         private void Look()
         {
-            pitch -= Input.GetAxisRaw("Mouse Y") * sensitivity;
+            float mouseX = Input.GetAxisRaw("Mouse X") * sensitivity;
+            float mouseY = Input.GetAxisRaw("Mouse Y") * sensitivity;
+
+            pitch -= mouseY;
             pitch = Mathf.Clamp(pitch, -90f, 90f);
-            yaw += Input.GetAxisRaw("Mouse X") * sensitivity;
-            firstPersonCamera.transform.localRotation = Quaternion.Euler(pitch, yaw, 0);
+
+            yaw += mouseX;
+
+            firstPersonCamera.transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+            transform.rotation = Quaternion.Euler(0f, yaw, 0f);
         }
 
         private bool CheckIfGrounded()
