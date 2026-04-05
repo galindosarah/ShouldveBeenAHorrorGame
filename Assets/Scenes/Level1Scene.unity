@@ -1786,7 +1786,7 @@ Transform:
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.054545455, y: 1.3127272, z: -0.23999994}
+  m_LocalPosition: {x: -0.084, y: 1.4, z: 0.144}
   m_LocalScale: {x: 0.18181817, y: 0.18181817, z: 0.18181817}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2983,6 +2983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2015478074}
   - component: {fileID: 2015478075}
+  - component: {fileID: 2015478076}
   m_Layer: 0
   m_Name: Hilda Model
   m_TagString: Untagged
@@ -3039,6 +3040,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2015478076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015478073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5e2311d7d6c3047ba59234ed9c5ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
+  animator: {fileID: 2015478075}
+  controller: {fileID: 1626496949}
+  rb: {fileID: 1626496950}
 --- !u!1 &2073589334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3955143218009240791, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
