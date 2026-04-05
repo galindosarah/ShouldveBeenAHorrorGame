@@ -273,6 +273,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &142697726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142697727}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &142697727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142697726}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00103, y: 0.01075, z: -0.00187}
+  m_LocalScale: {x: 0.0018181817, y: 0.0018181817, z: 0.0018181817}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1464895776910787049}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &157682124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2984,6 +3015,7 @@ GameObject:
   - component: {fileID: 2015478074}
   - component: {fileID: 2015478075}
   - component: {fileID: 2015478076}
+  - component: {fileID: 2015478077}
   m_Layer: 0
   m_Name: Hilda Model
   m_TagString: Untagged
@@ -3055,6 +3087,24 @@ MonoBehaviour:
   animator: {fileID: 2015478075}
   controller: {fileID: 1626496949}
   rb: {fileID: 1626496950}
+--- !u!114 &2015478077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015478073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4ca1469dec281408585d0918efb741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
+  animator: {fileID: 2015478075}
+  playerCamera: {fileID: 961739752}
+  fireballPrefab: {fileID: 1988683109982696180, guid: 4244efc8c40e5a543b15065eb7960e0c, type: 3}
+  firePoint: {fileID: 142697727}
+  fireForce: 20
+  attackCooldown: 0.5
 --- !u!1 &2073589334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3955143218009240791, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
@@ -4590,7 +4640,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 142697727}
   m_Father: {fileID: 2015478074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1502840562845709994
