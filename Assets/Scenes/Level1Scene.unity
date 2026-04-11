@@ -4089,6 +4089,7 @@ GameObject:
   - component: {fileID: 1626496952}
   - component: {fileID: 1626496949}
   - component: {fileID: 919132147560702691}
+  - component: {fileID: 919132147560702692}
   m_Layer: 0
   m_Name: Hilda_Sygna_10
   m_TagString: Player
@@ -4113,6 +4114,23 @@ MonoBehaviour:
   cameraHolder: {fileID: 961739753}
   crouchCamPos: {x: 0, y: 0.8, z: 0}
   playerModel: {fileID: 2015478073}
+--- !u!114 &919132147560702692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147560702690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189924c6bb414c74087205487ec8d9cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
+  cam: {fileID: 961739752}
+  interactDistance: 3
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &935851904179008097
 GameObject:
   m_ObjectHideFlags: 0
