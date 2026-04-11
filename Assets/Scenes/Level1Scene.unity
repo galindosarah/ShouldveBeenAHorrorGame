@@ -1930,6 +1930,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2490047618607822213, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3135042480467042265, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -1942,9 +1946,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4686590075207234297, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5668977294076105424, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668977294076105424, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5668977294076105424, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
       propertyPath: m_StaticEditorFlags
