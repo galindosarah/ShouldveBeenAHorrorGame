@@ -2118,7 +2118,7 @@ MonoBehaviour:
   targetsRemaining: 0
   playerOnCarpet: 0
   carpet: {fileID: 1740704927}
-  liftHeight: 10
+  liftHeight: 50
   liftSpeed: 2
   playerCamera: {fileID: 961739752}
   previewCameras:
@@ -6592,15 +6592,15 @@ MonoBehaviour:
     m_Bits: 8
   movementSpeed: 16
   sprintKey: 304
-  sprintMultiplier: 2
+  sprintMultiplier: 1.4
   jumpKey: 32
   jumps: 1
   jumpForce: 8
   jumpBuffer: 0.075
   coyoteTime: 0.125
-  fallMultiplier: 2.5
+  fallMultiplier: 5
   lowJumpFallMultiplier: 2
-  maxFallSpeed: 20
+  maxFallSpeed: 30
 --- !u!54 &1626496950
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8116,8 +8116,8 @@ MonoBehaviour:
   playerCamera: {fileID: 961739752}
   fireballPrefab: {fileID: 1988683109982696180, guid: 4244efc8c40e5a543b15065eb7960e0c, type: 3}
   firePoint: {fileID: 142697727}
-  fireForce: 20
-  attackCooldown: 0.5
+  fireForce: 40
+  attackCooldown: 0.1
 --- !u!1 &2015677194
 GameObject:
   m_ObjectHideFlags: 0
