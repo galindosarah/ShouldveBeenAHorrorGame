@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class CarpetTrigger : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public PuzzleManager puzzleManager;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if(other.CompareTag("Player"))
+        {
+            puzzleManager.playerOnCarpet = true;
+        }
     }
 }
