@@ -5,7 +5,7 @@ public class PauseGame : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject instructionsMenu;
-    public static bool isPaused = false;
+    //public static bool isPaused = false;
 
     private void Start()
     {
@@ -17,27 +17,19 @@ public class PauseGame : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
-        {   
-            if (isPaused && instructionsMenu.activeSelf)
-            {
-                BackToPauseMenu();
-            }
-            else if (isPaused)
-            {
+        {
+            if (GameStateManager.Instance.IsPaused())
                 Resume();
-            }
-            else
-            {
+            else if (GameStateManager.Instance.IsGameplay())
                 Pause();
-            }
         }
     }
 
     public void Pause()
     {
         pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
-        isPaused = true;
+
+        GameStateManager.Instance.SetState(GameState.Paused);
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -46,8 +38,9 @@ public class PauseGame : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
-        isPaused = false;
+        instructionsMenu.SetActive(false);
+
+        GameStateManager.Instance.SetState(GameState.Gameplay);
 
         resumeCursorState();
     }
@@ -60,9 +53,8 @@ public class PauseGame : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f;
+        GameStateManager.Instance.SetState(GameState.Gameplay);
         SceneManager.LoadScene("TitleScene");
-        isPaused = false;
     }
 
     public void Quit()

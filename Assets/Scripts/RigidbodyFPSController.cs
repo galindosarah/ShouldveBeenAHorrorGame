@@ -149,7 +149,7 @@ namespace DigitalWorlds
                 jumpBufferCounter -= Time.deltaTime;
             }
 
-            if (!lockCamera && !PauseGame.isPaused)
+            if (!lockCamera && GameStateManager.Instance.IsGameplay())
             {
                 Look();
             }
@@ -202,7 +202,7 @@ namespace DigitalWorlds
 
             Vector2 axis = Vector2.zero;
 
-            if (canMove)
+            if (canMove && GameStateManager.Instance.IsGameplay())
             {
                 axis = new(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
 
