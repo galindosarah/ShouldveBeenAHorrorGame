@@ -2189,6 +2189,10 @@ PrefabInstance:
       propertyPath: m_StaticShadowCaster
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2825063748869628823, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2654481396982912612, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -2245,6 +2249,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6134872954351184579, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_Quality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872954351184579, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6805750304583129045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -2252,6 +2264,30 @@ PrefabInstance:
     - target: {fileID: 6805750304583129045, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174783855284572321, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174783855284572321, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174783855284572321, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174783855284572321, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174783855284572321, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174783855284572321, guid: c3e39e54a4b444148a33a7679343a460, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
