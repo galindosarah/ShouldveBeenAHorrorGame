@@ -1,8 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PuzzleButton : MonoBehaviour, IInteractable
+public class EvilButton : MonoBehaviour, IInteractable
 {
-    public PuzzleManager puzzleManager;
     private bool used = false;
 
     public void Interact(Transform player, Transform inspectPoint)
@@ -10,7 +10,7 @@ public class PuzzleButton : MonoBehaviour, IInteractable
         if (used) return;
 
         used = true;
-        puzzleManager.StartPuzzle();
+        SceneManager.LoadScene(0);
     }
 
     public void StopInteract()

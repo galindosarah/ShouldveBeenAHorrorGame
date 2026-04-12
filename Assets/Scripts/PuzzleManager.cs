@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using DigitalWorlds;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -12,11 +14,26 @@ public class PuzzleManager : MonoBehaviour
     public float liftHeight = 10f;
     public float liftSpeed = 2f;
 
+    public Camera playerCamera;
+    public Camera[] previewCameras;
+    public float previewTime = 1.5f;
+
     private bool lifting = false;
+    private bool allTargetsDestroyed = false;
+    private bool started = false;
+
+    public RigidbodyFPSController playerController;
+
+    public PlayerInteract playerInteract;
+    // public MonoBehaviour playerLookScript; // assign your look script here if needed
 
     public void StartPuzzle()
     {
+        if (started) return;
+
+        started = true;
         SpawnTargets();
+        StartCoroutine(ShowTargetsSequence());
     }
 
     void SpawnTargets()
@@ -25,9 +42,36 @@ public class PuzzleManager : MonoBehaviour
 
         foreach (Transform point in spawnPoints)
         {
-            GameObject target = Instantiate(targetPrefab, point.position, Quaternion.identity);
+            GameObject target = Instantiate(targetPrefab, point.position, point.rotation);
             target.GetComponent<Target>().puzzleManager = this;
         }
+    }
+
+    IEnumerator ShowTargetsSequence()
+    {
+        playerInteract.enabled = false;
+
+        playerController.EnableMovement(false);
+        playerController.LockCamera(true);
+
+        foreach (Camera cam in previewCameras)
+        {
+            if (cam == null) continue;
+
+            cam.enabled = true;
+            playerCamera.enabled = false;
+
+            yield return new WaitForSeconds(previewTime);
+
+            cam.enabled = false;
+        }
+
+        playerCamera.enabled = true;
+
+        playerController.EnableMovement(true);
+        playerController.LockCamera(false);
+
+        playerInteract.enabled = true;
     }
 
     public void TargetDestroyed()
@@ -36,11 +80,26 @@ public class PuzzleManager : MonoBehaviour
 
         if (targetsRemaining <= 0)
         {
-            Startlift();
+            allTargetsDestroyed = true;
+
+            if (playerOnCarpet)
+            {
+                StartLift();
+            }
         }
     }
 
-    void Startlift()
+    public void SetPlayerOnCarpet(bool value)
+    {
+        playerOnCarpet = value;
+
+        if (playerOnCarpet && allTargetsDestroyed && !lifting)
+        {
+            StartLift();
+        }
+    }
+
+    void StartLift()
     {
         lifting = true;
     }
