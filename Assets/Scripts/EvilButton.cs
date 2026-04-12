@@ -10,6 +10,9 @@ public class EvilButton : MonoBehaviour, IInteractable
         if (used) return;
 
         used = true;
+        GameStateManager.Instance.SetState(GameState.Gameplay);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene(0);
     }
 

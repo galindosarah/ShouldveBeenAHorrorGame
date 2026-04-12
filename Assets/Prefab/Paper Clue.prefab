@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1194085957895125846}
   - component: {fileID: 2827668270160671987}
   - component: {fileID: 61099889265803321}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6723390124973652048}
   - component: {fileID: 8424406948957789858}
-  m_Layer: 0
+  - component: {fileID: 5133779785325047580}
+  m_Layer: 6
   m_Name: Paper Clue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,8 +144,22 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.705042, y: 0.86915386, z: 3.5839767}
-  m_Center: {x: -0.064694166, y: -0.06542283, z: 0.027127266}
+  m_Size: {x: 2.705042, y: 0.26626214, z: 3.4238205}
+  m_Center: {x: -0.064694166, y: -0.024070218, z: -0.12605095}
+--- !u!114 &5133779785325047580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059994949220069465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f611f77176585334bb0143ab01db7a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InspectObject
+  rotationOffset: {x: 0, y: 90, z: -90}
+  scaleOffset: {x: 0.75, y: 0.75, z: 0.75}
 --- !u!1 &7279660712911174296
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8156957015947283902}
   - component: {fileID: 1592622624314274487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Clue Drawing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

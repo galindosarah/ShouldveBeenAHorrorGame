@@ -54,7 +54,7 @@ public class PauseGame : MonoBehaviour
     public void LoadMainMenu()
     {
         GameStateManager.Instance.SetState(GameState.Gameplay);
-        SceneManager.LoadScene("TitleScene");
+        SceneManager.LoadScene(0);
     }
 
     public void Quit()

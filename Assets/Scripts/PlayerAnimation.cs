@@ -13,7 +13,16 @@ public class PlayerAnimation : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        bool isGameplay = GameStateManager.Instance.IsGameplay();
+        
+        animator.enabled = isGameplay;
+
+        if (!isGameplay)
+        {
+            return;
+        }
+
         float speed = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z).magnitude;
         animator.SetFloat("Speed", speed);
 
@@ -23,6 +32,15 @@ public class PlayerAnimation : MonoBehaviour
 
     void HandleJump()
     {
+        bool isGameplay = GameStateManager.Instance.IsGameplay();
+
+        animator.enabled = isGameplay;
+
+        if (!isGameplay)
+        {
+            return;
+        }
+
         animator.SetTrigger("Jump");
     }
 

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using DigitalWorlds;
 
@@ -22,10 +23,15 @@ public class PuzzleManager : MonoBehaviour
     private bool allTargetsDestroyed = false;
     private bool started = false;
 
+    // Statue Puzzle
+    public List<RotateObject> statues;
+    [SerializeField] private GameObject itemToSpawn;
+    [SerializeField] private Transform itemSpawnPoint;
+    public bool statuePuzzleCompleted { get; private set; } = false;
+
     public RigidbodyFPSController playerController;
 
     public PlayerInteract playerInteract;
-    // public MonoBehaviour playerLookScript; // assign your look script here if needed
 
     public void StartPuzzle()
     {
@@ -111,5 +117,24 @@ public class PuzzleManager : MonoBehaviour
             Vector3 targetPos = new Vector3(carpet.position.x, liftHeight, carpet.position.z);
             carpet.position = Vector3.MoveTowards(carpet.position, targetPos, liftSpeed * Time.deltaTime);
         }
+    }
+
+    public void CheckStatuePuzzle()
+    {   
+        if (statuePuzzleCompleted)
+        {
+            return;
+        }
+
+        foreach (RotateObject statue in statues)
+        {
+            if (!statue.IsAligned())
+            {
+                return;
+            }
+        }
+
+        statuePuzzleCompleted = true;
+        Instantiate(itemToSpawn, itemSpawnPoint.position, itemSpawnPoint.rotation);
     }
 }
