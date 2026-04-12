@@ -6,20 +6,20 @@ public class PlayerInteract : MonoBehaviour
     public float interactDistance = 3f;
     public LayerMask interactLayer;
 
-    [SerializeField] private GameObject interactPrompt;
-    [SerializeField] private GameObject closeButton;
-    [SerializeField] private Transform inspectPoint;
+    public GameObject interactPrompt;
+    public GameObject closeButton;
+    public Transform inspectPoint;
 
-    private IInteractable currentInteractable;
-    private bool isInspecting;
+    public IInteractable currentInteractable;
+    public bool isInspecting;
 
-    void Start() 
+    public void Start() 
     { 
         interactPrompt.SetActive(false);
         closeButton.SetActive(false);
     }
 
-    void Update()
+    public void Update()
     {
         if (GameStateManager.Instance.IsPaused())
             return;
@@ -37,7 +37,7 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    void TryInteract()
+    public void TryInteract()
     {
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
@@ -62,7 +62,7 @@ public class PlayerInteract : MonoBehaviour
         interactPrompt.SetActive(false);
     }
 
-    void StartInteraction()
+    public void StartInteraction()
     {
         currentInteractable.Interact(transform, inspectPoint);
 

@@ -1,16 +1,23 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TitleButton : MonoBehaviour
+public class TitleButton : MonoBehaviour, IInteractable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public string titleSceneName = "TitleScene";
+
+    public void Interact(Transform player, Transform inspectPoint)
     {
-        
+        Debug.Log("Button pressed!");
+        SceneManager.LoadScene(titleSceneName);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StopInteract()
     {
-        
+        // Not needed
+    }
+
+    public bool RequiresInspection()
+    {
+        return false;
     }
 }

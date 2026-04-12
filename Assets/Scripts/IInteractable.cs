@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    void Interact(Transform player, Transform inspectPoint);
-    void StopInteract();
-    bool RequiresInspection();
+    public void Interact(Transform player, Transform inspectPoint);
+    public void StopInteract();
+    public bool RequiresInspection();
 }
