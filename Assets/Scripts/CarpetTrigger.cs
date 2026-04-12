@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class CarpetTrigger : MonoBehaviour
 {
-    public PuzzleManager puzzleManager;
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            puzzleManager.playerOnCarpet = true;
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
         }
     }
 }

@@ -6,13 +6,13 @@ public class PuzzleManager : MonoBehaviour
     public Transform[] spawnPoints;
 
     public int targetsRemaining;
-    public bool playerOnCarpet = false;
 
     public Transform carpet;
     public float liftHeight = 10f;
     public float liftSpeed = 2f;
 
     private bool lifting = false;
+    private Vector3 targetPosition;
 
     public void StartPuzzle()
     {
@@ -36,12 +36,13 @@ public class PuzzleManager : MonoBehaviour
 
         if (targetsRemaining <= 0)
         {
-            Startlift();
+            PuzzleComplete();
         }
     }
 
-    void Startlift()
+    void PuzzleComplete()
     {
+        targetPosition = carpet.position + Vector3.up * liftHeight;
         lifting = true;
     }
 
@@ -49,8 +50,7 @@ public class PuzzleManager : MonoBehaviour
     {
         if (lifting)
         {
-            Vector3 targetPos = new Vector3(carpet.position.x, liftHeight, carpet.position.z);
-            carpet.position = Vector3.MoveTowards(carpet.position, targetPos, liftSpeed * Time.deltaTime);
+            carpet.position = Vector3.MoveTowards(carpet.position, targetPosition, liftSpeed * Time.deltaTime);
         }
     }
 }
