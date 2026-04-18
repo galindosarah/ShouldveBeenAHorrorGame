@@ -54,6 +54,7 @@ public class PauseGame : MonoBehaviour
     public void LoadMainMenu()
     {
         GameStateManager.Instance.SetState(GameState.Gameplay);
+        GemUIManager.Instance.ResetGemCount();
         SceneManager.LoadScene(0);
     }
 
