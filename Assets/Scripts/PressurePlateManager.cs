@@ -2,31 +2,24 @@ using UnityEngine;
 
 public class PressurePlateManager : MonoBehaviour
 {
-    public int[] correctSequence; 
-    public GameObject gemObject;
+    public int[] correctSequence;
+    public PressurePlate[] allPlates;
+
+    public GameObject gemPrefab;
+    public Transform gemSpawnPoint;
 
     private int currentStep = 0;
     private bool puzzleSolved = false;
-
-    private void Start()
-    {
-        if (gemObject != null)
-        {
-            gemObject.SetActive(false); // hide gem at start
-        }
-    }
 
     public void PlatePressed(int plateID)
     {
         if (puzzleSolved) return;
 
-        // Check if the pressed plate matches the expected one
         if (plateID == correctSequence[currentStep])
         {
             currentStep++;
             Debug.Log("Correct plate! Step: " + currentStep);
 
-            // If all steps are completed
             if (currentStep >= correctSequence.Length)
             {
                 SolvePuzzle();
@@ -34,24 +27,32 @@ public class PressurePlateManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wrong plate. Resetting sequence.");
+            Debug.Log("Wrong plate. Resetting puzzle.");
             ResetSequence();
         }
     }
 
-    private void SolvePuzzle()
+    void SolvePuzzle()
     {
         puzzleSolved = true;
         Debug.Log("Puzzle solved!");
 
-        if (gemObject != null)
+        if (gemPrefab != null && gemSpawnPoint != null)
         {
-            gemObject.SetActive(true);
+            Instantiate(gemPrefab, gemSpawnPoint.position, gemSpawnPoint.rotation);
         }
     }
 
     public void ResetSequence()
     {
         currentStep = 0;
+
+        foreach (PressurePlate plate in allPlates)
+        {
+            if (plate != null)
+            {
+                plate.ResetPlate();
+            }
+        }
     }
 }
