@@ -2903,7 +2903,7 @@ MonoBehaviour:
   playerOnCarpet: 0
   carpet: {fileID: 1740704927}
   liftHeight: 45
-  liftSpeed: 4
+  liftSpeed: 5
   playerCamera: {fileID: 961739752}
   previewCameras:
   - {fileID: 855639832}
