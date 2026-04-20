@@ -2903,13 +2903,15 @@ MonoBehaviour:
   playerOnCarpet: 0
   carpet: {fileID: 1740704927}
   liftHeight: 45
-  liftSpeed: 5
+  liftSpeed: 8
   playerCamera: {fileID: 961739752}
   previewCameras:
   - {fileID: 855639832}
   - {fileID: 1149407912}
   - {fileID: 1995323677}
   previewTime: 1.5
+  playerController: {fileID: 1626496949}
+  playerInteract: {fileID: 919132147560702692}
   statues:
   - {fileID: 7321684589573786274}
   - {fileID: 1395743104}
@@ -2918,8 +2920,6 @@ MonoBehaviour:
   - {fileID: 2000311369}
   itemToSpawn: {fileID: 2742609340045390850, guid: 392eb3c571242ac48af776db6f47fe45, type: 3}
   itemSpawnPoint: {fileID: 133192233}
-  playerController: {fileID: 1626496949}
-  playerInteract: {fileID: 919132147560702692}
 --- !u!4 &569544313
 Transform:
   m_ObjectHideFlags: 0

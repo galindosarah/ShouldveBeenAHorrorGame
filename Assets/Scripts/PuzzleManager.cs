@@ -19,19 +19,35 @@ public class PuzzleManager : MonoBehaviour
     public Camera[] previewCameras;
     public float previewTime = 1.5f;
 
+    public RigidbodyFPSController playerController;
+    public PlayerInteract playerInteract;
+
     private bool lifting = false;
+    private bool lowering = false;
     private bool allTargetsDestroyed = false;
     private bool started = false;
 
-    // Statue Puzzle
+    private Vector3 carpetStartPos;
+    private Vector3 carpetTopPos;
+
     public List<RotateObject> statues;
     [SerializeField] private GameObject itemToSpawn;
     [SerializeField] private Transform itemSpawnPoint;
     public bool statuePuzzleCompleted { get; private set; } = false;
 
-    public RigidbodyFPSController playerController;
+    void Start()
+    {
+        carpetStartPos = carpet.position;
+        carpetTopPos = new Vector3(carpetStartPos.x, liftHeight, carpetStartPos.z);
 
-    public PlayerInteract playerInteract;
+        foreach (Camera cam in previewCameras)
+        {
+            if (cam != null)
+            {
+                cam.enabled = false;
+            }
+        }
+    }
 
     public void StartPuzzle()
     {
@@ -88,7 +104,7 @@ public class PuzzleManager : MonoBehaviour
         {
             allTargetsDestroyed = true;
 
-            if (playerOnCarpet)
+            if (playerOnCarpet && !lifting)
             {
                 StartLift();
             }
@@ -99,23 +115,49 @@ public class PuzzleManager : MonoBehaviour
     {
         playerOnCarpet = value;
 
-        if (playerOnCarpet && allTargetsDestroyed && !lifting)
+        if (playerOnCarpet && allTargetsDestroyed && !lifting && !lowering)
         {
             StartLift();
+        }
+        else if (!playerOnCarpet && lifting)
+        {
+            StartLower();
         }
     }
 
     void StartLift()
     {
+        lowering = false;
         lifting = true;
+    }
+
+    void StartLower()
+    {
+        lifting = false;
+        lowering = true;
     }
 
     void Update()
     {
         if (lifting)
         {
-            Vector3 targetPos = new Vector3(carpet.position.x, liftHeight, carpet.position.z);
-            carpet.position = Vector3.MoveTowards(carpet.position, targetPos, liftSpeed * Time.deltaTime);
+            carpet.position = Vector3.MoveTowards(carpet.position, carpetTopPos, liftSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(carpet.position, carpetTopPos) < 0.01f)
+            {
+                carpet.position = carpetTopPos;
+                lifting = false;
+            }
+        }
+        else if (lowering)
+        {
+            carpet.position = Vector3.MoveTowards(carpet.position, carpetStartPos, liftSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(carpet.position, carpetStartPos) < 0.01f)
+            {
+                carpet.position = carpetStartPos;
+                lowering = false;
+            }
         }
     }
 
