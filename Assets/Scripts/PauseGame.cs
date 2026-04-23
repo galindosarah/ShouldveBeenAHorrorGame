@@ -33,6 +33,9 @@ public class PauseGame : MonoBehaviour
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+        var controller = FindFirstObjectByType<DigitalWorlds.RigidbodyFPSController>();
+        controller.ResetMovement();
     }
 
     public void Resume()

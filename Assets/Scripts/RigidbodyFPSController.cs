@@ -129,7 +129,7 @@ namespace DigitalWorlds
         private void Update()
         {
             // Handle jump input
-            if (Input.GetKeyDown(jumpKey) && canMove)
+            if (Input.GetKeyDown(jumpKey) && canMove && GameStateManager.Instance.IsGameplay())
             {
                 if (jumpsRemaining > 0 || coyoteTimeCounter > 0f)
                 {
