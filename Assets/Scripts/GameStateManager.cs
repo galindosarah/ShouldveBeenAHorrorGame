@@ -1,14 +1,26 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager Instance;
 
+
     public GameState CurrentState { get; private set; }
 
     void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         CurrentState = GameState.Gameplay;
     }
 
@@ -30,5 +42,22 @@ public class GameStateManager : MonoBehaviour
     public bool IsInspecting()
     {
         return CurrentState == GameState.Inspecting;
+    }
+
+    public void LoadMainMenu()
+    {   
+        Time.timeScale = 1f;
+
+        if (GameStateManager.Instance != null)
+        {
+            GameStateManager.Instance.SetState(GameState.Gameplay);
+        }
+
+        if (GemUIManager.Instance != null)
+        {
+            GemUIManager.Instance.ResetGemCount();
+        }
+
+        SceneManager.LoadScene(0);
     }
 }

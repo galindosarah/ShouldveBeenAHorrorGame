@@ -6,6 +6,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
+
 
 public class BossHealth : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class BossHealth : MonoBehaviour
 
     public string winSceneName;
 
+    public AudioClip damageSound;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,6 +30,7 @@ public class BossHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        AudioSource.PlayClipAtPoint(damageSound, transform.position);
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
@@ -60,4 +65,5 @@ public class BossHealth : MonoBehaviour
         Destroy(gameObject);
         SceneManager.LoadScene(winSceneName);
     }
+
 }

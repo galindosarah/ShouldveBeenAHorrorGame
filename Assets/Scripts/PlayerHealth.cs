@@ -7,6 +7,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -22,15 +23,21 @@ public class PlayerHealth : MonoBehaviour
     private bool canTakeDamage = true;
     public float damageCooldown = 1f;
 
+    public AudioClip damageSound;
+    // private AudioSource audioSource;
+
     void Start()
     {
         currentHearts = 1;
         UpdateUI();
+        // audioSource = GetComponent<AudioSource>();
     }
 
     public void TakeDamage(int amount)
     {
         if (!canTakeDamage) return;
+
+        AudioSource.PlayClipAtPoint(damageSound, transform.position);
 
         canTakeDamage = false;
         Invoke(nameof(ResetDamage), damageCooldown);
@@ -79,6 +86,13 @@ public class PlayerHealth : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene(gameOverSceneName);
+        StartCoroutine(LoadSceneAfterDelay(gameOverSceneName, 0.4f));
+        // SceneManager.LoadScene(gameOverSceneName);
+    }
+
+    IEnumerator LoadSceneAfterDelay(string sceneName, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 }

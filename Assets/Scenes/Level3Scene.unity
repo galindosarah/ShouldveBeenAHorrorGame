@@ -22710,6 +22710,7 @@ MonoBehaviour:
   fullBanana: {fileID: 21300000, guid: 5ac17207e04f7471ba700936192c28c2, type: 3}
   emptyBanana: {fileID: 21300000, guid: c519b73cc69674c5cb17274cceb9e4a4, type: 3}
   winSceneName: GameWinScene
+  damageSound: {fileID: 8300000, guid: d7745b65d043144bcaa3615467dc9caa, type: 3}
 --- !u!1 &1611744146
 GameObject:
   m_ObjectHideFlags: 0
@@ -37492,6 +37493,7 @@ MonoBehaviour:
   emptyHeart: {fileID: 21300000, guid: d49a5a21af9382548ba8ae5ec8e701bc, type: 3}
   gameOverSceneName: GameOverScene
   damageCooldown: 1
+  damageSound: {fileID: 8300000, guid: 5c812d04f7bc74d1584ab2343fcc146d, type: 3}
 --- !u!33 &7676753847416529092
 MeshFilter:
   m_ObjectHideFlags: 0
