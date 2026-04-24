@@ -10,38 +10,38 @@ public class BossChase : MonoBehaviour
     public float speed = 3f;
     public float attackDistance = 2f;
     public float attackCooldown = 1.5f;
+    public float chaseRange = 10f;
 
     private Rigidbody rb;
     private float lastAttackTime;
 
-    private Animator anim;
-
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
+        Vector3 direction = (player.position - transform.position).normalized;
 
-        if (distance > attackDistance)
+        if (distance <= chaseRange && distance > attackDistance)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            rb.linearVelocity = new Vector3(direction.x * speed, rb.linearVelocity.y, direction.z * speed);
 
-            transform.LookAt(player);
-
-            if (anim != null)
-                anim.SetBool("isMoving", true);
+            Vector3 lookPos = new Vector3(player.position.x, transform.position.y, player.position.z);
+            transform.LookAt(lookPos);
+        }
+        else if (distance <= attackDistance)
+        {
+            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+            TryAttack();
         }
         else
         {
-            if (anim != null)
-                anim.SetBool("isMoving", false);
-
-            TryAttack();
+            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
         }
     }
 

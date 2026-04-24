@@ -56,7 +56,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Walk
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 0
@@ -67,7 +67,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -85,7 +85,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Take 001 (1)
+      name: Idle
       takeName: Take 001
       internalID: 9067093048684652814
       firstFrame: 55
@@ -96,7 +96,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -166,7 +166,32 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Donkey Kong(Clone)
+      parentName: 
+      position: {x: 0.030646091, y: 1.3822764, z: 0.00000006042122}
+      rotation: {x: 0.00000006657903, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1.7536666}
+    - name: Left Arm
+      parentName: Donkey Kong(Clone)
+      position: {x: -0, y: 0.000000036472084, z: 0.00000009689331}
+      rotation: {x: -0.00039401534, y: 0.0016360662, z: -0.013629271, w: 0.9999057}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Right Arm
+      parentName: Donkey Kong(Clone)
+      position: {x: -0, y: -0.000000036553203, z: 0.00000019378662}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Right Leg
+      parentName: Donkey Kong(Clone)
+      position: {x: -0, y: -0.000000036553203, z: 0.00000019378662}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Left Hand
+      parentName: Donkey Kong(Clone)
+      position: {x: -0, y: -0.000000036553203, z: 0.00000019378662}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -181,7 +206,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1

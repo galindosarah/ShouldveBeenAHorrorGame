@@ -22109,9 +22109,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &1601769282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22125,9 +22125,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossChase
   player: {fileID: 2315266794214437172}
-  speed: 3
+  speed: 7
   attackDistance: 2
   attackCooldown: 1.5
+  chaseRange: 50
 --- !u!114 &1601769283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29930,8 +29931,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148474327662}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000006657903, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.88689, y: 5.6, z: -98.781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.6, z: -98.781}
   m_LocalScale: {x: 1.6540998, y: 1.6540998, z: 2.90074}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31984,7 +31985,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652140136660}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.042631775, y: 0.1880683, z: -1.54961}
 --- !u!1 &2577372090383908962
 GameObject:
   m_ObjectHideFlags: 0
@@ -32359,7 +32360,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652140136660}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.892788e-13, y: -5.398337e-13, z: 5.606238e-13}
 --- !u!4 &2863930355260024420
 Transform:
   m_ObjectHideFlags: 0
@@ -36448,7 +36449,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652140136660}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.23748471, y: 0.00052675075, z: 0.25416797}
 --- !u!4 &7252693230967291728
 Transform:
   m_ObjectHideFlags: 0
@@ -38088,7 +38089,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652140136660}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.06973834, y: 0, z: 0}
 --- !u!4 &9199394450198996082
 Transform:
   m_ObjectHideFlags: 0
