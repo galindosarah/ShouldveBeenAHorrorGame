@@ -5206,7 +5206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0788c3ab7da45124b936e02219e58f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GemUIManager
-  GemCount: 0
+  GemCount: 3
 --- !u!4 &400352700
 Transform:
   m_ObjectHideFlags: 0
@@ -22192,8 +22192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossChase
   player: {fileID: 2315266794214437172}
-  attackDistance: 2
-  attackCooldown: 1.5
   playerInBossRoom: 0
 --- !u!114 &1601769283
 MonoBehaviour:
@@ -22209,6 +22207,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth
   maxHealth: 6
   winSceneName: GameWinScene
+--- !u!1 &1611744146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611744147}
+  - component: {fileID: 1611744149}
+  - component: {fileID: 1611744148}
+  m_Layer: 0
+  m_Name: AttackTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1611744147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611744146}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543450652140136660}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1611744148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611744146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010f34382de7b46a6ad370a174ff0347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossAttackTrigger
+  damage: 1
+  attackCooldown: 1.5
+--- !u!135 &1611744149
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611744146}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1619281143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30067,6 +30133,7 @@ Transform:
   m_LocalScale: {x: 1.6540998, y: 1.6540998, z: 4.285263}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1611744147}
   - {fileID: 2551279390668659532}
   - {fileID: 7249469251350157414}
   - {fileID: 2849340000490996246}
@@ -36920,7 +36987,7 @@ MonoBehaviour:
   - {fileID: 2002721501}
   fullHeart: {fileID: 21300000, guid: bebdd68edde64284999c751fc711cccb, type: 3}
   emptyHeart: {fileID: 21300000, guid: d49a5a21af9382548ba8ae5ec8e701bc, type: 3}
-  gameOverSceneName: GameOver
+  gameOverSceneName: GameOverScene
   damageCooldown: 1
 --- !u!33 &7676753847416529092
 MeshFilter:

@@ -11,13 +11,13 @@ public class BossChase : MonoBehaviour
 {
     public Transform player;
     // public float speed = 3f;
-    public float attackDistance = 2f;
-    public float attackCooldown = 1.5f;
+    // public float attackDistance = 2f;
+    // public float attackCooldown = 1.5f;
     // public float chaseRange = 10f;
 
     // private Rigidbody rb;
     private NavMeshAgent agent;
-    private float lastAttackTime;
+    // private float lastAttackTime;
 
     public bool playerInBossRoom = false;
 
@@ -27,7 +27,7 @@ public class BossChase : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (player == null || !playerInBossRoom)
         {
@@ -55,31 +55,37 @@ public class BossChase : MonoBehaviour
         // {
         //     rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
         // }
-
-        if (distance > attackDistance)
-        {
-            agent.isStopped = false;
-            agent.SetDestination(player.position);
-        }
-        else
-        {
-            agent.isStopped = true;
-            TryAttack();
-        }
+        agent.isStopped = false;
+        agent.SetDestination(player.position);
+        // if (distance > attackDistance)
+        // {
+        //     agent.isStopped = false;
+        //     agent.SetDestination(player.position);
+        // }
+        // else
+        // {
+        //     agent.isStopped = true;
+        //     TryAttack();
+        // }
     }
 
-    void TryAttack()
-    {
-        if (Time.time - lastAttackTime >= attackCooldown)
-        {
-            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+    // void TryAttack()
+    // {
+    //     if (Time.time - lastAttackTime >= attackCooldown)
+    //     {
+    //         Debug.Log("Boss is trying to attack");
+    //         PlayerHealth playerHealth = player.GetComponentInParent<PlayerHealth>();
+    //         if (playerHealth != null)
+    //         {
+    //             Debug.Log("Player is taking damage");
+    //             playerHealth.TakeDamage(1);
+    //         }
+    //         else
+    //         {
+    //             Debug.Log("PlayerHealth NOT found...");
+    //         }
 
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(1);
-            }
-
-            lastAttackTime = Time.time;
-        }
-    }
+    //         lastAttackTime = Time.time;
+    //     }
+    // }
 }
