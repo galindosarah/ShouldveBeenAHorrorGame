@@ -11,9 +11,15 @@ public class PressurePlateManager : MonoBehaviour
     private int currentStep = 0;
     private bool puzzleSolved = false;
 
+    public AudioSource audioSource;
+    public AudioClip heartSpawnSound;
+    public AudioClip platePressSound;
+
     public void PlatePressed(int plateID)
     {
         if (puzzleSolved) return;
+
+        audioSource.PlayOneShot(platePressSound);
 
         if (plateID == correctSequence[currentStep])
         {
@@ -40,6 +46,7 @@ public class PressurePlateManager : MonoBehaviour
         if (gemPrefab != null && gemSpawnPoint != null)
         {
             Instantiate(gemPrefab, gemSpawnPoint.position, gemSpawnPoint.rotation);
+            audioSource.PlayOneShot(heartSpawnSound);
         }
     }
 

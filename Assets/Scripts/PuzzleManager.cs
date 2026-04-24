@@ -31,9 +31,14 @@ public class PuzzleManager : MonoBehaviour
     private Vector3 carpetTopPos;
 
     public List<RotateObject> statues;
+
     [SerializeField] private GameObject itemToSpawn;
     [SerializeField] private Transform itemSpawnPoint;
     public bool statuePuzzleCompleted { get; private set; } = false;
+
+    public AudioSource audioSource;
+    public AudioClip spawnSound;
+    public AudioClip targetSound;
 
     void Start()
     {
@@ -98,6 +103,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void TargetDestroyed()
     {
+        audioSource.PlayOneShot(targetSound);
         targetsRemaining--;
 
         if (targetsRemaining <= 0)
@@ -178,5 +184,6 @@ public class PuzzleManager : MonoBehaviour
 
         statuePuzzleCompleted = true;
         Instantiate(itemToSpawn, itemSpawnPoint.position, itemSpawnPoint.rotation);
+        audioSource.PlayOneShot(spawnSound);
     }
 }

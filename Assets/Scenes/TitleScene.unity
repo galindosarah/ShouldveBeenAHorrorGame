@@ -1857,8 +1857,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1530321614}
-  - component: {fileID: 1530321613}
   - component: {fileID: 1530321612}
+  - component: {fileID: 1530321613}
   m_Layer: 0
   m_Name: MusicManager (ONLY TITLE SCREEN)
   m_TagString: Untagged
@@ -1878,6 +1878,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b64de15b50d43d39729d4ee79cbeed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  sceneMusicList:
+  - sceneName: TitleScene
+    musicClip: {fileID: 8300000, guid: fdc5f471f64114bae80d0bad04f65c7e, type: 3}
+  - sceneName: OpeningScene
+    musicClip: {fileID: 8300000, guid: fdc5f471f64114bae80d0bad04f65c7e, type: 3}
+  - sceneName: Level1Scene
+    musicClip: {fileID: 8300000, guid: 89ed6973d7d0a40a3aaf2c056fcad62b, type: 3}
+  - sceneName: Level2Scene
+    musicClip: {fileID: 8300000, guid: 13f348d7cd4fa42b58a0f4e480056eaa, type: 3}
+  - sceneName: Level3Scene
+    musicClip: {fileID: 8300000, guid: 7bc5ea16973e4404ea19e14d291b9906, type: 3}
+  - sceneName: CreditScene
+    musicClip: {fileID: 8300000, guid: 92ecb0a09d7d8489295dae3f9dd08ac0, type: 3}
+  audioSource: {fileID: 1530321613}
+  fadeDuration: 0.5
+  musicVolume: 0.6
 --- !u!82 &1530321613
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1889,8 +1905,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: fdc5f471f64114bae80d0bad04f65c7e, type: 3}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1

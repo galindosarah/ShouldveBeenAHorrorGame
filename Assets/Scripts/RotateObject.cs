@@ -6,6 +6,9 @@ public class RotateObject : MonoBehaviour, IInteractable
     [SerializeField] private float rotationAmount = 30f;
     [SerializeField] private Vector3 requiredRotation;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip statueSpinSound;
+
     private Quaternion objectRotation;
     private bool isRotating = false;
     private PuzzleManager manager;
@@ -20,6 +23,7 @@ public class RotateObject : MonoBehaviour, IInteractable
     {
         objectRotation *= Quaternion.Euler(0f, rotationAmount, 0f);
         isRotating = true;
+        audioSource.PlayOneShot(statueSpinSound);
     }
 
     public void StopInteract() { }
