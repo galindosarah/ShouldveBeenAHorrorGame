@@ -28,6 +28,7 @@ public class PauseGame : MonoBehaviour
     public void Pause()
     {
         pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
 
         GameStateManager.Instance.SetState(GameState.Paused);
 
@@ -42,6 +43,7 @@ public class PauseGame : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         instructionsMenu.SetActive(false);
+        Time.timeScale = 1f;
 
         GameStateManager.Instance.SetState(GameState.Gameplay);
 
@@ -55,7 +57,8 @@ public class PauseGame : MonoBehaviour
     }
 
     public void LoadMainMenu()
-    {
+    {   
+        Time.timeScale = 1f;
         GameStateManager.Instance.SetState(GameState.Gameplay);
         GemUIManager.Instance.ResetGemCount();
         SceneManager.LoadScene(0);
