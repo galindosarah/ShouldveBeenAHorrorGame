@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BossAttackTrigger : MonoBehaviour
+public class AttackTrigger : MonoBehaviour
 {
     public int damage = 1;
     public float attackCooldown = 1.5f;

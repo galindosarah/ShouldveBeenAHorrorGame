@@ -5206,7 +5206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0788c3ab7da45124b936e02219e58f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GemUIManager
-  GemCount: 3
+  GemCount: 0
 --- !u!4 &400352700
 Transform:
   m_ObjectHideFlags: 0
@@ -19287,6 +19287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossRoomTrigger
   bossChase: {fileID: 1601769282}
+  gemUI: {fileID: 571511078}
 --- !u!4 &1367531745
 Transform:
   m_ObjectHideFlags: 0

@@ -7,12 +7,24 @@ using UnityEngine;
 public class BossRoomTrigger : MonoBehaviour
 {
     public BossChase bossChase;
+    public GemUI gemUI;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             bossChase.playerInBossRoom = true;
+            
+            if (gemUI != null)
+            {
+                gemUI.enabled = false;
+            }
+
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.SetHealthFromGems();
+            }
         }
     }
 
@@ -23,4 +35,5 @@ public class BossRoomTrigger : MonoBehaviour
             bossChase.playerInBossRoom = false;
         }
     }
+    
 }
