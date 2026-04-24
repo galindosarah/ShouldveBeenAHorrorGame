@@ -694,6 +694,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.9999998, y: 1.9999999, z: 0.75}
   m_Center: {x: 2.0000005, y: 0.9999997, z: 0.00000017136334}
+--- !u!108 &78481925 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 806197745133864995, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 221260285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &89529221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1033,6 +1038,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!82 &135866463 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6996240157877205522, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 474641756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &141131180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1687,6 +1697,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!82 &214591775 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6996240157877205522, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 221260285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &221260285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1740,9 +1755,21 @@ PrefabInstance:
       value: Candle (3)
       objectReference: {fileID: 0}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleLight
+      value: 
+      objectReference: {fileID: 78481925}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleCrackle
+      value: 
+      objectReference: {fileID: 214591775}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: puzzleManager
       value: 
       objectReference: {fileID: 1954801283}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: flameTransform
+      value: 
+      objectReference: {fileID: 387642143}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: targetColorIndex
       value: 1
@@ -2052,6 +2079,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240583953}
   m_CullTransparentMesh: 1
+--- !u!82 &257312854 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6996240157877205522, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 944011411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &272598006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2271,6 +2303,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.9999998, y: 3.9999998, z: 0.75}
   m_Center: {x: 2.0000005, y: 1.9999999, z: 0.0000000372529}
+--- !u!4 &293707831 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1757647543258980242, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 474641756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &316669611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2391,6 +2428,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.9999998, y: 1.9999999, z: 0.75}
   m_Center: {x: 2.0000005, y: 0.99999994, z: 0.0000010095537}
+--- !u!4 &330401374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1757647543258980242, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 1903629536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &343400034 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6996240157877205522, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 1903629536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &352153833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2727,6 +2774,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 795165706614100933, guid: c863f656782d099438e2f1ba789301c8, type: 3}
   m_PrefabInstance: {fileID: 702286227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &387642143 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1757647543258980242, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 221260285}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &388253801
 PrefabInstance:
@@ -3690,12 +3742,44 @@ PrefabInstance:
       value: Candle (4)
       objectReference: {fileID: 0}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleLight
+      value: 
+      objectReference: {fileID: 1364925428}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleCrackle
+      value: 
+      objectReference: {fileID: 135866463}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: puzzleManager
       value: 
       objectReference: {fileID: 1954801283}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: flameTransform
+      value: 
+      objectReference: {fileID: 293707831}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: normalBrightness
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: targetColorIndex
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: correctBrightness
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: correctFlameScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: correctFlameScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: correctFlameScale.z
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: flameColors.Array.size
@@ -3978,6 +4062,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.0000005, y: 1.9999999, z: 0.75}
   m_Center: {x: 2.0000002, y: 0.9999997, z: 0.0000011250377}
+--- !u!108 &510341290 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 806197745133864995, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 1903629536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &512365770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5225,6 +5314,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1, y: 1.9999999, z: 1.1}
   m_Center: {x: -0.00000055134296, y: 0.9999997, z: 0.00000002980232}
+--- !u!108 &666761206 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 806197745133864995, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 1492259417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &669685988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6521,6 +6615,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!82 &858192163 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6996240157877205522, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 1643878087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &878060796 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 795165706614100933, guid: c863f656782d099438e2f1ba789301c8, type: 3}
@@ -7401,7 +7500,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 261734575475758224, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.80192
+      value: -31.63
       objectReference: {fileID: 0}
     - target: {fileID: 261734575475758224, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7444,9 +7543,21 @@ PrefabInstance:
       value: Candle (5)
       objectReference: {fileID: 0}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleLight
+      value: 
+      objectReference: {fileID: 1842251972}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleCrackle
+      value: 
+      objectReference: {fileID: 257312854}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: puzzleManager
       value: 
       objectReference: {fileID: 1954801283}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: flameTransform
+      value: 
+      objectReference: {fileID: 1592629019}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: targetColorIndex
       value: 3
@@ -7512,6 +7623,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+--- !u!82 &950083129 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6996240157877205522, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 1492259417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &955014976 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 795165706614100933, guid: c863f656782d099438e2f1ba789301c8, type: 3}
@@ -10799,6 +10915,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.9999998, y: 3.9999998, z: 0.75}
   m_Center: {x: 1.9999999, y: 1.9999999, z: 0.00000051409006}
+--- !u!108 &1364925428 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 806197745133864995, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 474641756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1368253653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11821,9 +11942,21 @@ PrefabInstance:
       value: Candle
       objectReference: {fileID: 0}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleLight
+      value: 
+      objectReference: {fileID: 666761206}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleCrackle
+      value: 
+      objectReference: {fileID: 950083129}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: puzzleManager
       value: 
       objectReference: {fileID: 1954801283}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: flameTransform
+      value: 
+      objectReference: {fileID: 1773111260}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: targetColorIndex
       value: 4
@@ -12838,6 +12971,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!4 &1592629019 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1757647543258980242, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 944011411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1597236887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13394,6 +13532,11 @@ Transform:
   - {fileID: 766498039}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1636655970 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1757647543258980242, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 1643878087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1643878087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13447,9 +13590,21 @@ PrefabInstance:
       value: Candle (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleLight
+      value: 
+      objectReference: {fileID: 1935959635}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleCrackle
+      value: 
+      objectReference: {fileID: 858192163}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: puzzleManager
       value: 
       objectReference: {fileID: 1954801283}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: flameTransform
+      value: 
+      objectReference: {fileID: 1636655970}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: targetColorIndex
       value: 0
@@ -13525,7 +13680,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 78260040855692704, guid: 9a7063bf7ccd2460e8b2344d0655aac7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.35
+      value: -31.17808
       objectReference: {fileID: 0}
     - target: {fileID: 78260040855692704, guid: 9a7063bf7ccd2460e8b2344d0655aac7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14412,6 +14567,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1, y: 1.9999999, z: 1.1}
   m_Center: {x: -0.0000001937151, y: 0.9999997, z: 0.00000002980232}
+--- !u!4 &1773111260 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1757647543258980242, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 1492259417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782268355
 GameObject:
   m_ObjectHideFlags: 0
@@ -14878,6 +15038,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838501803}
   m_CullTransparentMesh: 1
+--- !u!108 &1842251972 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 806197745133864995, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 944011411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1842633385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15530,9 +15695,21 @@ PrefabInstance:
       value: Candle (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleLight
+      value: 
+      objectReference: {fileID: 510341290}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: candleCrackle
+      value: 
+      objectReference: {fileID: 343400034}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: puzzleManager
       value: 
       objectReference: {fileID: 1954801283}
+    - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+      propertyPath: flameTransform
+      value: 
+      objectReference: {fileID: 330401374}
     - target: {fileID: 5198584149592531066, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
       propertyPath: targetColorIndex
       value: 2
@@ -15718,6 +15895,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.0000005, y: 2.2737368e-13, z: 4.0000005}
   m_Center: {x: 2, y: -0.0000004768373, z: -2.000001}
+--- !u!108 &1935959635 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 806197745133864995, guid: c4e93ecbd13c04ea1bef4424e78d7c92, type: 3}
+  m_PrefabInstance: {fileID: 1643878087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1954801281
 GameObject:
   m_ObjectHideFlags: 0
@@ -15728,6 +15910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1954801282}
   - component: {fileID: 1954801283}
+  - component: {fileID: 1954801284}
   m_Layer: 0
   m_Name: PuzzleManager
   m_TagString: Untagged
@@ -15771,6 +15954,105 @@ MonoBehaviour:
   - {fileID: 920995854}
   specialGem: {fileID: 2742609340045390850, guid: 392eb3c571242ac48af776db6f47fe45, type: 3}
   gemSpawnPoint: {fileID: 1209323134}
+  audioSource: {fileID: 1954801284}
+  spawnSound: {fileID: 8300000, guid: 3325330f9b26e44799684840fd1c0fc3, type: 3}
+--- !u!82 &1954801284
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954801281}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1964256541
 GameObject:
   m_ObjectHideFlags: 0

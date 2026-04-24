@@ -7,6 +7,9 @@ public class CandlePuzzleManager : MonoBehaviour
     public GameObject specialGem;
     public Transform gemSpawnPoint;
 
+    public AudioSource audioSource;
+    public AudioClip spawnSound;
+
     private bool gemSpawned = false;
 
     public void CheckPuzzle()
@@ -31,6 +34,7 @@ public class CandlePuzzleManager : MonoBehaviour
         if (specialGem != null && gemSpawnPoint != null)
         {
             Instantiate(specialGem, gemSpawnPoint.position, gemSpawnPoint.rotation);
+            audioSource.PlayOneShot(spawnSound);
         }
     }
 }
