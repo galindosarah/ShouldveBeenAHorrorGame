@@ -1,13 +1,17 @@
 // DIG3878
+// Sarah Galindo
 // Annette Gonzalez
 // This script allows the boss to take damage and disappear once health is lost.
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour
 {
     public int maxHealth = 7;
     private int currentHealth;
+
+    public string winSceneName;
 
     void Start()
     {
@@ -30,5 +34,6 @@ public class BossHealth : MonoBehaviour
     {
         Debug.Log("Boss defeated!");
         Destroy(gameObject);
+        SceneManager.LoadScene(winSceneName);
     }
 }

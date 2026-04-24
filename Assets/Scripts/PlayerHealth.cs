@@ -23,7 +23,16 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        currentHearts = maxHearts;
+        if (GemUIManager.Instance != null)
+        {
+            currentHearts = GemUIManager.Instance.GemCount;
+        }
+        else
+        {
+            currentHearts = 1;
+        }
+
+        currentHearts = Mathf.Clamp(currentHearts, 1, maxHearts);
         UpdateUI();
     }
 

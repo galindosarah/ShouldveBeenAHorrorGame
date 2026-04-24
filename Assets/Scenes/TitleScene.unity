@@ -1893,6 +1893,8 @@ MonoBehaviour:
     musicClip: {fileID: 8300000, guid: 92ecb0a09d7d8489295dae3f9dd08ac0, type: 3}
   - sceneName: GameOverScene
     musicClip: {fileID: 8300000, guid: 7bc5ea16973e4404ea19e14d291b9906, type: 3}
+  - sceneName: GameWinScene
+    musicClip: {fileID: 8300000, guid: fdc5f471f64114bae80d0bad04f65c7e, type: 3}
   audioSource: {fileID: 1530321613}
   fadeDuration: 0.5
   musicVolume: 0.6
