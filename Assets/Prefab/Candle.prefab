@@ -65,6 +65,15 @@ MonoBehaviour:
   currentColorIndex: -1
   targetColorIndex: 1
   puzzleManager: {fileID: 0}
+  candleCrackle: {fileID: 0}
+  candleLight: {fileID: 0}
+  normalBrightness: 0.1
+  correctBrightness: 5
+  normalRange: 0.5
+  correctRange: 2
+  flameTransform: {fileID: 0}
+  normalFlameScale: {x: 1, y: 1, z: 1}
+  correctFlameScale: {x: 2.5, y: 2.5, z: 2.5}
 --- !u!198 &3327406234903141398
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5166,7 +5175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8603158815867614626, guid: fa0e90846a25f7449ae44388a9a45d87, type: 3}
       propertyPath: m_Name
-      value: SFX_Vefects_Candle_Crackling_Loop_01
+      value: CandleAudio
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5192,7 +5201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5627696518775099638, guid: 530f0d6dde2c4064eb5ce770f9ee4a9e, type: 3}
       propertyPath: m_Name
-      value: VFX_Candle_Smoke_01
+      value: CandleSmoke
       objectReference: {fileID: 0}
     - target: {fileID: 8964859838461161948, guid: 530f0d6dde2c4064eb5ce770f9ee4a9e, type: 3}
       propertyPath: m_RootOrder
@@ -5307,7 +5316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3623080441632633303, guid: 21c9e8ce59bd468438a5f5228271a913, type: 3}
       propertyPath: m_Name
-      value: Candle Point Light
+      value: CandleLight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5329,7 +5338,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5627696518775099638, guid: 5153f168db9bb1a4e8c5f0ab4705b0f9, type: 3}
       propertyPath: m_Name
-      value: VFX_Candle_Flame_01
+      value: CandleFlame
       objectReference: {fileID: 0}
     - target: {fileID: 8964859838461161948, guid: 5153f168db9bb1a4e8c5f0ab4705b0f9, type: 3}
       propertyPath: m_RootOrder

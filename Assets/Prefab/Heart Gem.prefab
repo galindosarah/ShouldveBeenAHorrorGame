@@ -118,3 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999225a3b01efce48ae900f5b0105e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectGem
+  collectSound: {fileID: 8300000, guid: be3cad7f5294a4f6a848a769b7485199, type: 3}

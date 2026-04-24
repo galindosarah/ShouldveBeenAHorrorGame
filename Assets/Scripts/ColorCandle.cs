@@ -2,22 +2,30 @@ using UnityEngine;
 
 public class ColorCandle : MonoBehaviour
 {
-    [Header("Candle Parts")]
     public ParticleSystem flameParticle;
     public Renderer wickRenderer;
     public ParticleSystem smokeParticle;
 
-
-    [Header("Puzzle Colors")]
     public Color[] flameColors;
     public int currentColorIndex = -1;
     public int targetColorIndex;
 
-    [Header("Puzzle Manager")]
     public CandlePuzzleManager puzzleManager;
 
     private Material wickMaterial;
-    private Material flameMaterial;
+
+    public AudioSource candleCrackle;
+
+    [SerializeField] private Light candleLight;
+    [SerializeField] private float normalBrightness = 0.1f;
+    [SerializeField] private float correctBrightness = 5f;
+    
+    [SerializeField] private float normalRange = 0.5f;
+    [SerializeField] private float correctRange = 2f;
+
+    [SerializeField] private Transform flameTransform;
+    [SerializeField] private Vector3 normalFlameScale = Vector3.one;
+    [SerializeField] private Vector3 correctFlameScale = new Vector3(2.5f, 2.5f, 2.5f);
 
     private void Start()
     {
@@ -34,12 +42,6 @@ public class ColorCandle : MonoBehaviour
             Debug.Log("Fireball hit candle: " + gameObject.name);
 
             CycleColor();
-
-            if (smokeParticle == null)
-            {
-                smokeParticle.Play();
-            }
-            
 
             if (puzzleManager != null)
                 puzzleManager.CheckPuzzle();
@@ -66,8 +68,10 @@ public class ColorCandle : MonoBehaviour
         Debug.Log(gameObject.name + " changed to color index: " + currentColorIndex);
 
         ChangeParticleColor(newColor);
-        ChangeMaterialColor(flameMaterial, newColor);
         ChangeMaterialColor(wickMaterial, newColor);
+        TurnOnSmoke();
+        TurnOnAudio();
+        UpdateLight(newColor);
     }
 
     private void ChangeParticleColor(Color newColor)
@@ -75,15 +79,11 @@ public class ColorCandle : MonoBehaviour
         if (flameParticle == null) return;
 
         var main = flameParticle.main;
-
         main.startColor = new ParticleSystem.MinMaxGradient(newColor);
 
         flameParticle.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         flameParticle.Clear();
         flameParticle.Play();
-
-        TurnOnSmoke();
-
     }
 
     private void ChangeMaterialColor(Material mat, Color newColor)
@@ -92,7 +92,54 @@ public class ColorCandle : MonoBehaviour
 
         if (mat.HasProperty("_TipColor"))
             mat.SetColor("_TipColor", newColor);
+    }
 
+    private void TurnOnSmoke()
+    {
+        if (smokeParticle == null) return;
+
+        if (!smokeParticle.isPlaying)
+        {
+            smokeParticle.Play();
+        }
+    }
+
+    private void TurnOnAudio()
+    {
+        if (candleCrackle == null) return;
+
+        if (!candleCrackle.isPlaying)
+        {
+            candleCrackle.Play();
+        }
+    }
+
+    private void UpdateLight(Color newColor)
+    {
+        if (candleLight == null) return;
+
+        candleLight.enabled = true;
+        candleLight.color = newColor;
+
+        if (currentColorIndex == targetColorIndex)
+        {
+            candleLight.intensity = correctBrightness;
+            candleLight.range = correctRange;
+            if (flameTransform != null)
+            {
+                flameTransform.localScale = correctFlameScale;
+            }
+
+        }
+        else
+        {
+            candleLight.intensity = normalBrightness;
+            candleLight.range = normalRange;
+            if (flameTransform != null)
+            {
+                flameTransform.localScale = normalFlameScale;
+            }
+        }
     }
 
     private void TurnOffFlame()
@@ -108,20 +155,21 @@ public class ColorCandle : MonoBehaviour
             smokeParticle.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             smokeParticle.Clear();
         }
-    }
 
-    private void TurnOnSmoke()
-    {
-        if (smokeParticle == null) return;
-
-        if (!smokeParticle.isPlaying)
+        if (candleCrackle != null)
         {
-            smokeParticle.Play();
+            candleCrackle.Stop();
+        }
+
+        if (candleLight != null)
+        {
+            candleLight.enabled = false;
+            candleLight.intensity = 0f;
         }
     }
-
     public bool IsCorrectColor()
     {
         return currentColorIndex == targetColorIndex;
     }
+
 }
