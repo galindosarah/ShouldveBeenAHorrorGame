@@ -1241,6 +1241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike Trap (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 692816057973389556, guid: bf174ed9f01d55f4abeb981a11becd42, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 1527239781}
     - target: {fileID: 8257102372308472879, guid: bf174ed9f01d55f4abeb981a11becd42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2
@@ -2035,6 +2039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike Trap (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 692816057973389556, guid: bf174ed9f01d55f4abeb981a11becd42, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 1527239781}
     - target: {fileID: 8257102372308472879, guid: bf174ed9f01d55f4abeb981a11becd42, type: 3}
       propertyPath: m_LocalScale.z
       value: 1506.2599
@@ -2101,6 +2109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike Trap (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 692816057973389556, guid: bf174ed9f01d55f4abeb981a11becd42, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 1527239781}
     - target: {fileID: 8257102372308472879, guid: bf174ed9f01d55f4abeb981a11becd42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2
@@ -3981,6 +3993,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431498994}
   m_CullTransparentMesh: 1
+--- !u!1 &1527239780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527239781}
+  m_Layer: 0
+  m_Name: Respawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1527239781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527239780}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 24.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1540679291
 GameObject:
   m_ObjectHideFlags: 0
@@ -5466,6 +5509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike Trap (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 692816057973389556, guid: bf174ed9f01d55f4abeb981a11becd42, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 1527239781}
     - target: {fileID: 8257102372308472879, guid: bf174ed9f01d55f4abeb981a11becd42, type: 3}
       propertyPath: m_LocalScale.z
       value: 1672.72
@@ -11871,6 +11918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike Trap
       objectReference: {fileID: 0}
+    - target: {fileID: 692816057973389556, guid: bf174ed9f01d55f4abeb981a11becd42, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 1527239781}
     - target: {fileID: 8257102372308472879, guid: bf174ed9f01d55f4abeb981a11becd42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2
@@ -14599,3 +14650,4 @@ SceneRoots:
   - {fileID: 754701008}
   - {fileID: 1695094480}
   - {fileID: 9103861887418710640}
+  - {fileID: 1527239781}
