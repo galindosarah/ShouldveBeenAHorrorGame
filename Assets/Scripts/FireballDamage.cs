@@ -8,13 +8,14 @@ public class FireballDamage : MonoBehaviour
 {
     public int damage = 1;
 
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         BossHealth boss = collision.gameObject.GetComponent<BossHealth>();
 
         if (boss != null)
         {
             boss.TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }

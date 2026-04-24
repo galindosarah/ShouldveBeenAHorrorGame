@@ -1,5 +1,6 @@
 // DIG 3878
 // Annette Gonzalez
+// Sarah Galindo
 // This script allows the gem hearts to turn into the player's health and will play the gameover screen
 // when the player loses all three hearts.
 

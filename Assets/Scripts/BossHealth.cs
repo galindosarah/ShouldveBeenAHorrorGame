@@ -5,28 +5,52 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour
 {
-    public int maxHealth = 7;
+    public int maxHealth = 6;
     private int currentHealth;
+
+    public Image[] bananas;
+    public Sprite fullBanana;
+    public Sprite emptyBanana;
 
     public string winSceneName;
 
     void Start()
     {
         currentHealth = maxHealth;
+        UpdateUI();
     }
 
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         Debug.Log("Boss HP: " + currentHealth);
+
+        UpdateUI();
 
         if (currentHealth <= 0)
         {
             Die();
+        }
+    }
+
+    private void UpdateUI()
+    {
+        for (int i = 0; i < bananas.Length; i++)
+        {
+            if (i < currentHealth)
+            {
+                bananas[i].sprite = fullBanana;
+            }
+            else
+            {
+                bananas[i].sprite = emptyBanana;
+            }
         }
     }
 

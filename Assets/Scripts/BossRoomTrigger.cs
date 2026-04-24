@@ -8,6 +8,7 @@ public class BossRoomTrigger : MonoBehaviour
 {
     public BossChase bossChase;
     public GemUI gemUI;
+    public GameObject bossHealthUI;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,8 +20,13 @@ public class BossRoomTrigger : MonoBehaviour
             {
                 gemUI.enabled = false;
             }
+            if (bossHealthUI != null)
+            {
+                bossHealthUI.SetActive(true);
+            }
 
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            
             if (playerHealth != null)
             {
                 playerHealth.SetHealthFromGems();
