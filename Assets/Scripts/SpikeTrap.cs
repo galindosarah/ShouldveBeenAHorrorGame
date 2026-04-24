@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SpikeTrap : MonoBehaviour
 {
+    [SerializeField] private Transform respawnPoint;
     private bool triggered = false;
 
     void OnTriggerEnter(Collider other)
@@ -13,12 +14,20 @@ public class SpikeTrap : MonoBehaviour
         {
             triggered = true;
 
-            RestartLevel();
+            RestartLevel(other.gameObject);
+
+            Invoke(nameof(ResetTrap), 1f);
         }
     }
 
-    void RestartLevel()
+    private void RestartLevel(GameObject player)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        player.transform.position = respawnPoint.position;
+        player.transform.rotation = respawnPoint.rotation;
+    }
+
+    private void ResetTrap()
+    {
+        triggered = false;
     }
 }
