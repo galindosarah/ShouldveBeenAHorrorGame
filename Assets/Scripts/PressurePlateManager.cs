@@ -1,3 +1,9 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// Celine Hui
+// This script allows the pressure plates to be pressed in a certain sequence to complete the puzzle.
+
 using UnityEngine;
 
 public class PressurePlateManager : MonoBehaviour

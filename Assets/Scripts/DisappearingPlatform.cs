@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Annette Gonzalez
+// This script allows the platforms to disappear after a certain amount of time of contact with player.
+
 using UnityEngine;
 
 public class DisappearingPlatform : MonoBehaviour

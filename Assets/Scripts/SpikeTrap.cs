@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Annette Gonzalez
+// This script allows the spike trap to restart the level after the player makes contact with it.
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

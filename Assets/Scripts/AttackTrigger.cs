@@ -1,3 +1,9 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// Annette Gonzalez
+// This script allows the player to take damage from the boss.
+
 using UnityEngine;
 
 public class AttackTrigger : MonoBehaviour
