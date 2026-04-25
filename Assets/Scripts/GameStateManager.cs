@@ -1,3 +1,9 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// Celine Hui
+// This script uses a singleton pattern to manage the game state across different scenes.
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -42,22 +48,5 @@ public class GameStateManager : MonoBehaviour
     public bool IsInspecting()
     {
         return CurrentState == GameState.Inspecting;
-    }
-
-    public void LoadMainMenu()
-    {   
-        Time.timeScale = 1f;
-
-        if (GameStateManager.Instance != null)
-        {
-            GameStateManager.Instance.SetState(GameState.Gameplay);
-        }
-
-        if (GemUIManager.Instance != null)
-        {
-            GemUIManager.Instance.ResetGemCount();
-        }
-
-        SceneManager.LoadScene(0);
     }
 }
