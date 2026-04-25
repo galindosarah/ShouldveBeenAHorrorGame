@@ -1,3 +1,9 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// Celine Hui
+// This script allows the scene to be changed. 
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

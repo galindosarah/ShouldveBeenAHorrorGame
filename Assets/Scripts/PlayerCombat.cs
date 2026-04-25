@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Annette Gonzalez
+// This script allows the player to shoot the fireball and have an attack animation.
+
 using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour

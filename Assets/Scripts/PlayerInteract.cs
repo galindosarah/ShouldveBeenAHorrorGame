@@ -1,3 +1,10 @@
+// Final
+// DIG 3878
+// Annette Gonzalez
+// Sarah Galindo
+// Celine Hui
+// This script allows the player to interact with interactable object and recieve a prompt to do so.
+
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour

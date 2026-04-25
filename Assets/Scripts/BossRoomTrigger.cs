@@ -1,3 +1,4 @@
+// Final
 // DIG 3878
 // Sarah Galindo
 // Sets up boss room trigger for boss to chase player when they enter the boss room.

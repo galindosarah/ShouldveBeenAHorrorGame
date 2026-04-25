@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Celine Hui
+// This script allows the pea statues to rotate when the player interacts with them.
+
 using UnityEngine;
 
 public class RotateObject : MonoBehaviour, IInteractable

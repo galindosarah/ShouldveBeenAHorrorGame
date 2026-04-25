@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Celine Hui
+// This script shows a typewriter animation for the narrative. 
+
 using UnityEngine;
 using System.Collections;
 using TMPro;

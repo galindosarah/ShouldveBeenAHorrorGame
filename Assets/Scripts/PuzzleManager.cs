@@ -1,3 +1,9 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// Celine Hui
+// This script controls the target puzzle, the elevating carpet, and the rotating pea statues.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

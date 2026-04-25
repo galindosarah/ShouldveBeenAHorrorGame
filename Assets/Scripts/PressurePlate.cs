@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// This script allows the player to interact with the pressure plates.
+
 using UnityEngine;
 
 public class PressurePlate : MonoBehaviour

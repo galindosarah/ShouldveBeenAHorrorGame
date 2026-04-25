@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Annette Gonzalez
+// This script allows the player animations to show depending on action.
+
 using UnityEngine;
 using DigitalWorlds;
 

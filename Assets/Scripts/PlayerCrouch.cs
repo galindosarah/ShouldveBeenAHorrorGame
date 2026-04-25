@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Annette Gonzalez
+// This script allows the player to crouch using the 'C' key.
+
 using UnityEngine;
 using DigitalWorlds;
 

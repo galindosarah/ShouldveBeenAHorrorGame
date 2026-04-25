@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// This script allows the player to interact with the button that starts the first puzzle.
+
 using UnityEngine;
 
 public class PuzzleButton : MonoBehaviour, IInteractable
