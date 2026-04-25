@@ -8,8 +8,16 @@ public class CollectGem : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {   
-            GemUIManager.Instance.GemCount++;
-            AudioSource.PlayClipAtPoint(collectSound, transform.position);
+            if (GemUIManager.Instance != null)
+            {
+                GemUIManager.Instance.AddGem();
+            }
+
+            if (collectSound != null)
+            {
+                AudioSource.PlayClipAtPoint(collectSound, transform.position);
+            }
+
             Destroy(gameObject);
         }
     }

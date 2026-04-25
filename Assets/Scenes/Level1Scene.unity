@@ -8518,8 +8518,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 16.473291, y: 1, z: 12.063147}
-  m_Center: {x: -0.6267464, y: 0, z: -1.5663614}
+  m_Size: {x: 16.473291, y: 15.493216, z: 12.063147}
+  m_Center: {x: -0.6267462, y: -7.246608, z: -1.5663614}
 --- !u!114 &1738191025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8993,6 +8993,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1804275208}
+  - component: {fileID: 1804275209}
   m_Layer: 5
   m_Name: Gems Icons
   m_TagString: Untagged
@@ -9022,6 +9023,24 @@ RectTransform:
   m_AnchoredPosition: {x: 970, y: -520}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1804275209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804275207}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5f55099d85fef46a1461f9cd497021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GemUI
+  gems:
+  - {fileID: 1665435781}
+  - {fileID: 531519530}
+  - {fileID: 914501536}
+  heartCollected: {fileID: 21300000, guid: d49a5a21af9382548ba8ae5ec8e701bc, type: 3}
+  heartEmpty: {fileID: 21300000, guid: bebdd68edde64284999c751fc711cccb, type: 3}
 --- !u!1 &1812309421
 GameObject:
   m_ObjectHideFlags: 0

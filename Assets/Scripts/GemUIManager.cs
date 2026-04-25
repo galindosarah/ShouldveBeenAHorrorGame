@@ -12,15 +12,25 @@ public class GemUIManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log("GemUIManager created and saved");
         }
         else
         {
+            Debug.Log("Duplicate GemUIManager destroyed.");
             Destroy(gameObject);
         }
     }
 
     public void ResetGemCount()
     {
+        Debug.Log("Gem count reset.");
         GemCount = 0;
+
+    }
+
+    public void AddGem()
+    {
+        GemCount++;
+        Debug.Log("Gem count is now: " + GemCount);
     }
 }
