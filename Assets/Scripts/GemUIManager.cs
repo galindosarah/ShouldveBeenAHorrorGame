@@ -1,3 +1,9 @@
+// Final
+// DIG 3878
+// Celine Hui
+// Sarah Galindo
+// This script allows the gem UI to keep track of the gems collected.
+
 using UnityEngine;
 
 public class GemUIManager : MonoBehaviour

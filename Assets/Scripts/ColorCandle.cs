@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// This script allows the candles to change color and brightness everytime it's hit by fireball.
+
 using UnityEngine;
 
 public class ColorCandle : MonoBehaviour

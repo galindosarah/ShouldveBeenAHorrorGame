@@ -1,3 +1,10 @@
+// Final
+// DIG3878
+// Annette Gonzalez
+// Celine Hui
+// Sarah Galindo
+// This script allows the button to be pressed which leads the player to a jumpscare and to the main menu.
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;

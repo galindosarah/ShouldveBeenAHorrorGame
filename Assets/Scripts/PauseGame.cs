@@ -1,3 +1,9 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// Celine Hui
+// This script allows the game to be paused using the 'P' key and shows a menu.
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

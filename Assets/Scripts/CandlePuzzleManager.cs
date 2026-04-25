@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// This script allows the gem to spawn when the candles are lit the correct colors.
+
 using UnityEngine;
 
 public class CandlePuzzleManager : MonoBehaviour

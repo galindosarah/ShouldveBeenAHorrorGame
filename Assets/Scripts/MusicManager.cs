@@ -1,3 +1,8 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// This script allows the music to play for each level.
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;

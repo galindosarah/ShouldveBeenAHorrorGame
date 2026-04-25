@@ -1,3 +1,9 @@
+// Final
+// DIG 3878
+// Annette Gonzalez
+// Sarah Galindo
+// This script allows the carpet to raise when the player steps on it.
+
 using UnityEngine;
 
 public class CarpetTrigger : MonoBehaviour

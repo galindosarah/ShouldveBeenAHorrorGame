@@ -1,3 +1,4 @@
+// Final
 // DIG 3878
 // Annette Gonzalez
 // This script allows the fireball to damage the boss.

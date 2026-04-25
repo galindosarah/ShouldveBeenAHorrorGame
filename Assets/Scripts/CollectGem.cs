@@ -1,3 +1,9 @@
+// Final
+// DIG 3878
+// Sarah Galindo
+// Celine Hui
+// This script allows the player to collect the gem and make a noise when collected.
+
 using UnityEngine;
 
 public class CollectGem : MonoBehaviour

@@ -1,3 +1,9 @@
+// Final
+// DIG 3878
+// Celine Hui
+// Sarah Galindo
+// This script allows the gems collected to be shown on screen. 
+
 using UnityEngine;
 using UnityEngine.UI;
 
