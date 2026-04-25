@@ -8552,7 +8552,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1740704927
 Transform:
@@ -9457,7 +9457,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1932011790
 Transform:
@@ -13647,6 +13647,10 @@ PrefabInstance:
       propertyPath: requiredRotation.y
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1842335591079153495, guid: 56971363278066b40a8cdaa63acf075d, type: 3}
+      propertyPath: statueCorrectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 21e95aafc6bce415196939af8d9a50cf, type: 3}
     - target: {fileID: 2071267750063641077, guid: 56971363278066b40a8cdaa63acf075d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.4
